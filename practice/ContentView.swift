@@ -8,9 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var num:Int = 0
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+            Button(action: {
+                self.num = Int.random(in: 0...100)
+    ///            print(num)
+            }) {
+                Text("Ramdom Button")
+            }
+            
+            Text("\(num)")
+            .font(.largeTitle)
+        }
     }
 }
 
